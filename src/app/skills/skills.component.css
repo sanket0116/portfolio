@@ -1,0 +1,47 @@
+.non-selectable{
+  user-select: none;
+}
+
+.skills-section {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.skills-section h2 {
+  color: #ffffff;
+}
+
+.skills-section p {
+  font-size: 1.0rem;
+  line-height: 1.6;
+}
+
+.btn-primary {
+  background-color: #ce004f;
+  border-color: #ce004f;
+}
+
+.btn-primary:hover {
+  background-color: #ad003e; 
+  border-color: #ad003e;
+  color: #000000;
+}
+
+@media (min-width: 768px) {
+  .col-lg-3 {
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .col-md-4,
+  .col-lg-3 {
+      flex: 0 0 50%;
+      max-width: 50%;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}

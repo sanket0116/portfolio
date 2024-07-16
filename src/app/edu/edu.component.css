@@ -1,0 +1,100 @@
+
+
+.text-center {
+    text-align: center;
+}
+
+.mt-5 {
+    margin-top: 3rem;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 15px;
+}
+
+@media (max-width: 768px) {
+    .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+.edu-container, .exp-container {
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.edu-item, .exp-item {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #3d3d3d;
+}
+
+.edu-item:last-child, .exp-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.edu-title, .exp-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ce004f;
+}
+
+.edu-details, .exp-details {
+    margin-left: 10px;
+}
+
+.edu-degree, .exp-job-title,
+.edu-institute, .exp-company,
+.edu-date, .exp-date,
+.percentage {
+    font-size: 14px;
+    color: #c0c0c0;
+}
+
+.percentage {
+    color: #ce004f;
+    margin-top: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .edu-title, .exp-title {
+        font-size: 18px;
+    }
+
+    .edu-degree, .exp-job-title,
+    .edu-institute, .exp-company,
+    .edu-date, .exp-date,
+    .percentage {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .edu-title, .exp-title {
+        font-size: 16px;
+    }
+
+    .edu-degree, .exp-job-title,
+    .edu-institute, .exp-company,
+    .edu-date, .exp-date,
+    .percentage {
+        font-size: 10px;
+    }
+}

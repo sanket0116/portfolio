@@ -1,0 +1,35 @@
+.non-selectable{
+  user-select: none;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #ffffff; 
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #ce004f; 
+}
+
+.about-section {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+
+
+.about-section p {
+  font-size: 1.0rem;
+  line-height: 1.6;
+}
+
+.btn-primary {
+  background-color: #ce004f;
+  border-color: #ce004f;
+}
+
+.btn-primary:hover {
+  background-color: #ad003e; 
+  border-color: #ad003e;
+  color: #000000;
+}
