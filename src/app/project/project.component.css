@@ -1,18 +1,6 @@
-body {
-  background-color: #121212;
-  color: #ffffff;
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-}
-.non-selectable{
+/* General Styles */
+.non-selectable {
   user-select: none;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .row {
@@ -89,14 +77,41 @@ body {
   margin-bottom: 5px;
 }
 
-/* Responsive adjustments */
-@media (max-width: 767px) {
+.project-heading {
+  font-family: "Source Sans Pro", sans-serif;
+  background: 50% 100% / 50% 50% no-repeat radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  animation: reveal 3000ms ease-in-out forwards 200ms, glow 2500ms linear infinite 2000ms;
+}
+
+@keyframes reveal {
+  80% {
+    letter-spacing: 8px;
+  }
+  100% {
+    background-size: 300% 300%;
+  }
+}
+
+@keyframes glow {
+  40% {
+    text-shadow: 0 0 8px #fff;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
   .col-lg-6 {
     max-width: 100%;
-    margin: 0 0 2rem 0; /* Adds some space between stacked cards */
+    margin: 0 0 2rem 0;
   }
 
-  .project-card {
-    margin-bottom: 2rem; /* Adds some space between stacked cards */
+  .row {
+    flex-direction: column;
+    align-items: center;
   }
 }

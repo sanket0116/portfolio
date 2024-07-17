@@ -1,31 +1,3 @@
-
-
-.text-center {
-    text-align: center;
-}
-
-.mt-5 {
-    margin-top: 3rem;
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.col-md-6 {
-    flex: 0 0 50%;
-    max-width: 50%;
-    padding: 15px;
-}
-
-@media (max-width: 768px) {
-    .col-md-6 {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-}
-
 .edu-container, .exp-container {
     background-color: #000000;
     padding: 20px;
@@ -51,14 +23,7 @@
     color: #ce004f;
 }
 
-.edu-details, .exp-details {
-    margin-left: 10px;
-}
-
-.edu-degree, .exp-job-title,
-.edu-institute, .exp-company,
-.edu-date, .exp-date,
-.percentage {
+.edu-date, .exp-date, .percentage {
     font-size: 14px;
     color: #c0c0c0;
 }
@@ -68,20 +33,76 @@
     margin-top: 5px;
 }
 
-/* Responsive Styles */
-@media (max-width: 992px) {
-    .container {
+.progress-container {
+    margin-bottom: 20px;
+}
+
+.edu-progress-wrapper, .exp-progress-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.vertical-progress {
+    position: relative;
+    height: 200px;
+    width: 8px;
+    background-color: #ddd;
+    margin-right: 20px;
+    border-radius: 5px; 
+}
+
+.progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ce004f;
+    border-radius: 3px; 
+}
+
+.edu-details, .exp-details {
+    flex: 1;
+}
+
+.education-heading {
+    font-family: "Source Sans Pro", sans-serif;
+    background: 50% 100% / 50% 50% no-repeat radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    animation: reveal 3000ms ease-in-out forwards 200ms, glow 2500ms linear infinite 2000ms;
+  }
+
+  @keyframes reveal {
+    80% {
+      letter-spacing: 8px;
+    }
+    100% {
+      background-size: 300% 300%;
+    }
+  }
+  
+  @keyframes glow {
+    40% {
+      text-shadow: 0 0 8px #fff;
+    }
+  }
+  
+@media (max-width: 768px) {
+    .col-md-6 {
+        flex: 0 0 100%;
         max-width: 100%;
     }
+}
 
+@media (max-width: 992px) {
     .edu-title, .exp-title {
         font-size: 18px;
     }
 
-    .edu-degree, .exp-job-title,
-    .edu-institute, .exp-company,
-    .edu-date, .exp-date,
-    .percentage {
+    .edu-date, .exp-date, .percentage {
         font-size: 12px;
     }
 }
@@ -91,10 +112,7 @@
         font-size: 16px;
     }
 
-    .edu-degree, .exp-job-title,
-    .edu-institute, .exp-company,
-    .edu-date, .exp-date,
-    .percentage {
+    .edu-date, .exp-date, .percentage {
         font-size: 10px;
     }
 }

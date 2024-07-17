@@ -1,10 +1,9 @@
-
-.non-selectable{
+.non-selectable {
   user-select: none;
 }
 
 .intro h1 {
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 3rem;
   margin-bottom: 10px;
 }
@@ -21,66 +20,51 @@
   overflow: hidden;
   background: linear-gradient(to right, #af04ff, #ce004f);
   -webkit-background-clip: text;
-  background-clip: none;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   border-right: 0.15em solid #ffffff;
   animation: rotate-in 3s forwards, blink-caret 0.75s step-end infinite;
   transition: all 0.5s ease;
 }
 
-.btn.hire-me-btn {
+.btn-primary {
   background-color: #ce004f;
-  border: none;
+  border-color: #ce004f;
   padding: 10px 20px;
-  color: #ffffff;
-  font-size: 1 rem;
+  font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  margin-top: 20px;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
-.btn.hire-me-btn:hover {
+.btn-primary:hover {
   background-color: #ad003e;
-  transform: scale(1.05);
-}
-
-.btn.hire-me-btn a {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.btn.hire-me-btn a:hover {
+  border-color: #ad003e;
   color: #000000;
 }
-.btn:hover {
-  background-color: #a8003b;
-}
 
-.code{
-  color: #ffffff;
-  font-size: 15rem;
+.home-container {
   display: flex;
-  justify-content: flex-end;
-  align-items: start;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
-.code:hover{
-  color: #ce004f;
-}
-
 
 @media (min-width: 768px) {
   .home-container {
-    margin-top: 5rem; 
+    margin-top: 5rem;
   }
   
   .intro {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
   }
 
+  .col-md-6 {
+    flex: 0 0 45%;
+    max-width: 45%;
+  }
 }
 
 @media (max-width: 767px) {
@@ -94,5 +78,9 @@
   
   .btn {
     padding: 8px 16px;
+  }
+  
+  .code h1 {
+    font-size: 5rem;
   }
 }

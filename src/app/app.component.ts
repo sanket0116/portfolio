@@ -14,7 +14,7 @@ import { EduComponent } from './edu/edu.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,HomeComponent,AboutComponent,ContactComponent,SkillsComponent,ServicesComponent,NavbarComponent, ProjectComponent,FooterComponent,EduComponent],
+  imports: [RouterOutlet,HomeComponent,AboutComponent,ContactComponent,SkillsComponent,ServicesComponent,NavbarComponent, ProjectComponent,FooterComponent,EduComponent,RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
