@@ -1,3 +1,7 @@
+.non-selectable{
+    user-select: none;
+  }
+  
 .edu-container, .exp-container {
     background-color: #000000;
     padding: 20px;

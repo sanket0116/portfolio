@@ -1,11 +1,27 @@
+:host {
+  display: block;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #000000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbar {
+  padding: 0.5rem;
+  transition: padding 0.3s ease-in-out;
+}
+
 .navbarbg {
-  background-color: #000000; 
+  background-color: #000000;
 }
 
 .navbar-brand {
   font-weight: bold;
   font-size: 1.5rem;
-  color: #ce004f; 
+  color: #ce004f;
 }
 
 .navbar-toggler {
@@ -17,6 +33,7 @@
   color: #ffffff;
   transition: color 0.3s ease-in-out;
   margin-left: 1rem;
+  position: relative;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover {
@@ -24,23 +41,7 @@
 }
 
 .navbar-dark .navbar-nav .active > .nav-link {
-  color: #ce004f; 
-}
-
-.nav-item {
-  position: relative;
-}
-
-.nav-item::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 2px;
-  background: #ce004f;
-  transition: width 0.3s;
-  position: absolute;
-  bottom: -5px;
-  left: 0;
+  color: #ce004f;
 }
 
 .nav-item:hover::after {
@@ -53,20 +54,22 @@
   justify-content: space-between;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .navbar-collapse {
-    display: none; 
+    display: none;
     position: absolute;
-    top: 100%; 
+    top: 100%;
     left: 0;
     width: 100%;
     background-color: #000000;
-    padding: 1rem; 
-    z-index: 1000; 
+    padding: 1rem;
+    z-index: 1000;
+    transition: max-height 0.3s ease-out;
+    overflow: hidden;
   }
 
   .navbar-toggler {
-    display: block; 
+    display: block;
   }
 
   .navbar-toggler-icon {
@@ -74,7 +77,7 @@
   }
 
   .navbar-toggler.active + .navbar-collapse {
-    display: block !important; 
+    display: block !important;
   }
 
   .navbar-nav {
@@ -95,21 +98,17 @@
 }
 
 .navbar-brand img {
-  width: 70px; 
+  width: 70px;
 }
 
 .navbar-toggler-icon {
-  background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><path stroke="rgba%28255, 255, 255, 0.5%29" stroke-width="2" linecap="round" linejoin="round" d="M4 7h22M4 15h22M4 23h22"/></svg>'); /* Custom icon */
-}
-
-.navbar-toggler:hover,
-.navbar-toggler:focus {
-  background-color: #ce004f;
+  background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><path stroke="rgba%28255, 255, 255, 0.5%29" stroke-width="2" linecap="round" linejoin="round" d="M4 7h22M4 15h22M4 23h22"/></svg>');
 }
 
 .navbar-collapse.show {
-  display: block !important; 
-  animation: slideDown 0.3s ease-out; 
+  display: block !important;
+  max-height: 500px; 
+  animation: slideDown 0.3s ease-out;
 }
 
 @keyframes slideDown {
@@ -121,4 +120,27 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.non-selectable {
+  user-select: none;
+}
+
+
+.navbar-dark .nav-link::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #ce004f;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-dark .nav-link:hover::before,
+.navbar-dark .nav-link:focus::before {
+  visibility: visible;
+  width: 100%;
 }

@@ -37,6 +37,51 @@
   animation: reveal 3000ms ease-in-out forwards 200ms, glow 2500ms linear infinite 2000ms;
   text-transform: uppercase;
 }
+/* Add this CSS to your styles file */
+
+.skill-icon {
+  position: relative;
+  text-align: center;
+}
+
+.skill-icon img {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.skill-icon:hover img {
+  transform: scale(1.1);
+}
+
+.skill-name {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #ffffff;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.skill-icon:hover .skill-name {
+  opacity: 1;
+}
+
+.skill-icon:hover .skill-name::after {
+  content: attr(alt);
+  display: block;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  white-space: nowrap;
+  font-size: 0.8rem;
+}
+
 
 @keyframes reveal {
   80% {

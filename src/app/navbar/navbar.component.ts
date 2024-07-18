@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
@@ -15,5 +15,19 @@ export class NavbarComponent {
 
   toggleNavbar() {
     this.navbarOpen = !this.navbarOpen;
+  }
+
+  handleLinkClick() {
+    if (window.innerWidth < 992) { 
+      this.toggleNavbar();
+    }
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    const target = event.target as Window;
+    if (target.innerWidth >= 992) {
+      this.navbarOpen = false; 
+    }
   }
 }
