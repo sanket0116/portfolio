@@ -84,3 +84,61 @@
     font-size: 5rem;
   }
 }
+
+.container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px; /* Adjust as needed */
+  height: 400px; /* Adjust as needed */
+  perspective: 800px;
+  z-index: -1; /* Ensure the cube is in the background */
+  opacity: 0.3;
+}
+
+.cube {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  transform-style: preserve-3d;
+  animation: cubeRotate 10s linear infinite; 
+}
+
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+  font-weight: bold;
+  font-family: Courier, monospace;
+  background-color: #333;
+  border: 2px solid #ce004f;
+  overflow: hidden;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  color: transparent; 
+  background-image: linear-gradient(to right, #af04ff, #ce004f);
+  -webkit-background-clip: text; 
+  background-clip: text; 
+}
+
+.front  { transform: translateZ(100px); }
+.back   { transform: rotateY(180deg) translateZ(100px); }
+.left   { transform: rotateY(-90deg) translateZ(100px); }
+.right  { transform: rotateY(90deg) translateZ(100px); }
+.top    { transform: rotateX(90deg) translateZ(100px); }
+.bottom { transform: rotateX(-90deg) translateZ(100px); }
+
+@keyframes cubeRotate {
+  from {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}

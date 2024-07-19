@@ -2,6 +2,10 @@
   user-select: none;
 }
 
+.container{
+  background-color: #000000;
+}
+
 .navbar-dark .navbar-nav .nav-link {
   color: #ffffff; 
   transition: color 0.3s ease-in-out;
@@ -15,8 +19,6 @@
   padding: 20px;
   border-radius: 10px;
 }
-
-
 
 .about-section p {
   font-size: 1.0rem;
